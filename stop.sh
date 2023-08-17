@@ -15,7 +15,6 @@ if [ -f "/etc/hosts.backup" ]; then
 else
     # Remove the added entries
     for url in "${social_media_urls[@]}"; do
-        echo "127.0.0.1 $url" | sudo tee -a /etc/hosts > /dev/null
         escaped_pattern=$(echo "$url" | sed 's/\./\\./g')
         sed -i "/$escaped_pattern/d" /etc/hosts
     done
