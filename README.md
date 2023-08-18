@@ -31,4 +31,4 @@ chmod +x stop.sh
 sudo ./stop.sh
 ```
 
-Additionally, you may modify the script and add or remove any particular hosts you may like.
+Add the URLs you want to blacklist in blacklist.txt
